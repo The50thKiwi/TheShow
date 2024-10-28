@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Entry Site</title>
+  <style>
+    /* Inline CSS for styling */
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    #searchBar {
+      padding: 10px;
+      width: 80%;
+      max-width: 500px;
+      font-size: 16px;
+      color: #000;
+      background-color: #fff;
+      border: 2px solid #333;
+      outline: none;
+    }
+    #output {
+      margin-top: 20px;
+      white-space: pre-wrap; /* keeps formatting in results */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="searchBar" placeholder="Enter code or phrase here...">
+    <button onclick="checkCode()">Submit</button>
+    <div id="output"></div>
+  </div>
+  <script>
+    // JavaScript for code validation
+    const codes = {
+      "we all are watching you": "Izethameli",
+      "audiance": "Izethameli",
+      "kaelin thorne": "Salt",
+      "salt": "Pure and solid",
+      "urgan": "wanderer",
+      "verian riylnnelle": "scion",
+      "kiwi": '<a href="https://youtu.be/ldEkpHOgc_A" target="_blank">https://youtu.be/ldEkpHOgc_A</a>',
+      "valdor": "ˇ˙´®´ ˆß µø®´ †ø ˙ˆµ †˙å˜ å˜¥ø˜´ ˚˜ø∑ß. Ó´ †å˚´ß †˙´ ƒ¨†¨®´ ƒ®øµ ˙ˆß ˚ˆ˜ †ø ©ˆ√´ ø˜´ †ø ˙ˆß ˚ˆ˜©∂øµ.",
+      "drift woold cove": "A place and tails",
+      "count": "A great friend and a better builder",
+      "test": "Test for what?",
+      "the 3 little pigs": "Ionk Ionk Ionk",
+      "rapunzel": "Let down your hair",
+      "airack": '<a href="https://youtu.be/Z0w1tACVMPI" target="_blank">https://youtu.be/Z0w1tACVMPI</a>',
+      "speak all evil": "You're so sweet to have thought of me HAHAHAHA...",
+      "see all evil": '<a href="https://youtu.be/PDjX9DKcOOQ" target="_blank">https://youtu.be/PDjX9DKcOOQ</a>',
+      "thank you": '<a href="https://youtu.be/6BtFFSiYKrk" target="_blank">https://youtu.be/6BtFFSiYKrk</a>',
+      "love": "Overrated",
+      "d&d": "An addiction",
+      "dnd": "An Addiction",
+      "the50thkiwi": "I have been advised by my lawyers not to talk about the other 49 kiwis...",
+      "grammar": "FUCK YOU AM DYSLEXIC OK!?!?!?",
+      "help": "Bella camerason",
+      "sans": '<a href="https://tinyurl.com/ysddd4v8" target="_blank">https://tinyurl.com/ysddd4v8</a>',
+      "love you": "Well I don’t",
+      "what was that": "It must have been the wind",
+      "fallen earth": "The end brings a new beginning.",
+      "die": "You first",
+      "hell": "Been there, done that.",
+      "zeus": '<a href="https://www.tiktok.com/@renzag_27/video/7164971410400546075" target="_blank">https://www.tiktok.com/@renzag_27/video/7164971410400546075</a>'
+    };
+
+    function checkCode() {
+      const input = document.getElementById("searchBar").value.toLowerCase().trim();
+      const output = document.getElementById("output");
+
+      if (codes[input]) {
+        output.innerHTML = codes[input];
+      } else {
+        output.textContent = "Come on, you can do better";
+      }
+    }
+  </script>
+</body>
+</html>
